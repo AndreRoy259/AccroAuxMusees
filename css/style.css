@@ -1,4 +1,17 @@
 body{
   font-family: 'Montserrat', sans-serif;
+}
 
+.font-bold{
+    font-weight: bold;
+
+}
+
+.special-font{
+  font-family: 'Playfair Display', serif;
+}
+
+.special-font-bold {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
 }

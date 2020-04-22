@@ -45,10 +45,14 @@
         </div>
         <ul class="nav justify-content-around py-4">
           <li class="nav-item">
-            <a class="nav-link black-text active" href="#!">Accueil</a>
+            <a class="nav-link black-text active" href="./index.html"
+              >Accueil</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link black-text" href="#!">Circuits des musées</a>
+            <a class="nav-link black-text" href="./login.html"
+              >Circuits des musées</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link black-text" href="#!">Blogue</a>
@@ -66,7 +70,51 @@
       <div class="container mb-5">
         <!-- Default form register -->
         <form class="text-center border border-light p-5" action="#!">
-          <p class="h4 mb-4">Sign up</p>
+          <p class="h2 mb-4 special-font-bold">Créons votre compte!</p>
+
+          <!-- Gender -->
+          <p class="text-left font-bold">
+            Identité de genre
+            <strong>(cochez toutes les réponses applicables):</strong>
+          </p>
+          <div class="custom-control custom-checkbox text-left">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="defaultRegisterMale"
+            />
+            <label class="custom-control-label" for="defaultRegisterMale"
+              >Homme</label
+            >
+          </div>
+          <div class="custom-control custom-checkbox text-left">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="defaultRegisterFormFemale"
+            />
+            <label class="custom-control-label" for="defaultRegisterFormFemale"
+              >Femme</label
+            >
+          </div>
+          <div class="custom-control custom-checkbox text-left">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="defaultRegisterFormOther"
+            />
+            <label class="custom-control-label" for="defaultRegisterFormOther"
+              >Je m'identifie comme:</label
+            >
+          </div>
+          <input
+            type="text"
+            id="defaultRegisterGender"
+            class="form-control mb-4"
+            placeholder=""
+            aria-describedby="defaultRegisterFormPhoneHelpBlock"
+            disabled
+          />
 
           <div class="form-row mb-4">
             <div class="col">
@@ -75,7 +123,7 @@
                 type="text"
                 id="defaultRegisterFormFirstName"
                 class="form-control"
-                placeholder="First name"
+                placeholder="Prénom"
               />
             </div>
             <div class="col">
@@ -84,8 +132,103 @@
                 type="text"
                 id="defaultRegisterFormLastName"
                 class="form-control"
-                placeholder="Last name"
+                placeholder="Nom"
               />
+            </div>
+          </div>
+
+          <!-- Age -->
+          <p class="text-left font-bold">
+            Groupe d'âge:
+          </p>
+          <div class="row">
+            <div class="col">
+              <!-- Group of default radios - option 1 -->
+              <div class="custom-control custom-radio text-left">
+                <input
+                  type="radio"
+                  class="custom-control-input"
+                  id="defaultGroupExample1"
+                  name="groupOfDefaultRadios"
+                />
+                <label class="custom-control-label" for="defaultGroupExample1"
+                  >18-24 ans</label
+                >
+              </div>
+            </div>
+            <div class="col">
+              <!-- Group of default radios - option 2 -->
+              <div class="custom-control custom-radio text-left">
+                <input
+                  type="radio"
+                  class="custom-control-input"
+                  id="defaultGroupExample2"
+                  name="groupOfDefaultRadios"
+                  checked
+                />
+                <label class="custom-control-label" for="defaultGroupExample2"
+                  >25-34 ans</label
+                >
+              </div>
+            </div>
+            <div class="col">
+              <!-- Group of default radios - option 3 -->
+              <div class="custom-control custom-radio text-left">
+                <input
+                  type="radio"
+                  class="custom-control-input"
+                  id="defaultGroupExample3"
+                  name="groupOfDefaultRadios"
+                />
+                <label class="custom-control-label" for="defaultGroupExample3"
+                  >35-44 ans</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col">
+              <!-- Group of default radios - option 4 -->
+              <div class="custom-control custom-radio text-left">
+                <input
+                  type="radio"
+                  class="custom-control-input"
+                  id="defaultGroupExample4"
+                  name="groupOfDefaultRadios"
+                />
+                <label class="custom-control-label" for="defaultGroupExample4"
+                  >45-54 ans</label
+                >
+              </div>
+            </div>
+            <div class="col">
+              <!-- Group of default radios - option 5 -->
+              <div class="custom-control custom-radio text-left">
+                <input
+                  type="radio"
+                  class="custom-control-input"
+                  id="defaultGroupExample5"
+                  name="groupOfDefaultRadios"
+                  checked
+                />
+                <label class="custom-control-label" for="defaultGroupExample5"
+                  >55-64 ans</label
+                >
+              </div>
+            </div>
+            <div class="col">
+              <!-- Group of default radios - option 6 -->
+              <div class="custom-control custom-radio text-left">
+                <input
+                  type="radio"
+                  class="custom-control-input"
+                  id="defaultGroupExample6"
+                  name="groupOfDefaultRadios"
+                />
+                <label class="custom-control-label" for="defaultGroupExample6"
+                  >65 ans et plus</label
+                >
+              </div>
             </div>
           </div>
 
@@ -94,37 +237,42 @@
             type="email"
             id="defaultRegisterFormEmail"
             class="form-control mb-4"
-            placeholder="E-mail"
+            placeholder="Courriel"
           />
 
           <!-- Password -->
           <input
             type="password"
             id="defaultRegisterFormPassword"
-            class="form-control"
-            placeholder="Password"
+            class="form-control mb-4"
+            placeholder="Mot de passe"
             aria-describedby="defaultRegisterFormPasswordHelpBlock"
           />
-          <small
+          <!-- <small
             id="defaultRegisterFormPasswordHelpBlock"
             class="form-text text-muted mb-4"
           >
             At least 8 characters and 1 digit
-          </small>
+          </small> -->
 
-          <!-- Phone number -->
+          <!-- City -->
           <input
             type="text"
-            id="defaultRegisterPhonePassword"
-            class="form-control"
-            placeholder="Phone number"
+            id="defaultRegisterInterest"
+            class="form-control mb-4"
+            placeholder="Ville"
             aria-describedby="defaultRegisterFormPhoneHelpBlock"
           />
-          <small
-            id="defaultRegisterFormPhoneHelpBlock"
-            class="form-text text-muted mb-4"
-          >
-            Optional - for two step authentication
+          <!-- Interest -->
+          <input
+            type="text"
+            id="defaultRegisterInterest"
+            class="form-control"
+            placeholder="Intérêt(s): Arts visuels, peinture, dessins, ..."
+            aria-describedby="defaultRegisterFormPhoneHelpBlock"
+          />
+          <small id="defaultRegisterInterest" class="form-text text-muted mb-4">
+            Il n'y a pas de mauvaise réponse
           </small>
 
           <!-- Newsletter -->
@@ -137,17 +285,17 @@
             <label
               class="custom-control-label"
               for="defaultRegisterFormNewsletter"
-              >Subscribe to our newsletter</label
+              >Abonnez-moi à l'infolettre</label
             >
           </div>
 
           <!-- Sign up button -->
           <button class="btn btn-black my-4 btn-block" type="submit">
-            Sign in
+            S'enregistrer
           </button>
 
           <!-- Social register -->
-          <p>or sign up with:</p>
+          <p>où enregistrez-vous avec:</p>
 
           <a href="#" class="mx-2" role="button"
             ><i class="fab fa-facebook-f fa-2x black-text"></i
@@ -158,14 +306,15 @@
           <a href="#" class="mx-2" role="button"
             ><i class="fab fa-linkedin-in fa-2x black-text"></i
           ></a>
-          
 
           <hr />
 
           <!-- Terms of service -->
           <p>
-            By clicking <em>Sign up</em> you agree to our
-            <a class="grey-text" href="" target="_blank">terms of service</a>
+            En cliquant sur <em>S'enregistrer</em>, vous acceptez nos
+            <a class="grey-text" href="" target="_blank"
+              >conditions d'utilisation</a
+            >
           </p>
         </form>
 
